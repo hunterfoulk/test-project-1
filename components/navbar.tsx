@@ -23,22 +23,22 @@ const Navbar: React.FC<Props> = ({ }) => {
             <div className="navbar p-6 font-mono flex justify-center max-w-[100%]">
 
                 <div className="nav-container max-w-[1300px] w-[1300px] flex flex-row">
-                    <div className="image-container flex items-center text-2xl text-[#4A4A4A] justify-center">
+                    <div className="image-container hidden sm:flex items-center text-2xl text-[#4A4A4A] flex-1 ">
                         <Image src="/images/logo3.png" height={45} width={50} />
                         <Link href="/" >
-                            <span className="ml-2 cursor-pointer" onClick={() => setTab("Home")}>Hunt's</span>
+                            < span className="hidden sm:block ml-2 cursor-pointer" onClick={() => setTab("Home")}>Hunt's</span>
                         </Link>
                     </div>
-                    <div className="nav-links image-container flex-1 flex items-center text-xl text-[#4A4A4A] justify-end">
+                    <div className="justify-around flex-1 flex items-center text-xl text-[#4A4A4A] ">
 
                         <Link href="/">
-                            <span className="mx-10  cursor-pointer" >Home</span>
+                            <span className=" cursor-pointer" >Home</span>
                         </Link>
                         <Link href="/menu">
                             <span className="cursor-pointer " >Menu</span>
                         </Link>
 
-                        <span className="mx-10">Rewards</span>
+                        <span className="">Rewards</span>
                         <span className="cursor-pointer" ref={btnRef} onClick={onOpen}><FaShoppingBag /></span>
                         <Drawer
                             isOpen={isOpen}

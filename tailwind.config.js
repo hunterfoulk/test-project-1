@@ -47,11 +47,11 @@ module.exports = {
       'screen': "100vh"
     },
     screens: {
-      'sm': '500px',
+      'sm': '600px',
 
-      'md': '800px',
+      'md': '730px',
 
-      'lg': '1024px',
+      'lg': '2024px',
 
 
       // => @media (min-width: 1280px) { ... }
