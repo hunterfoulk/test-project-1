@@ -36,10 +36,10 @@ const MenuItem: React.FC<Props> = ({ menuItem }) => {
             < div className="min-h-screen w-full flex flex-col items-center bg-white font-mono ">
                 <Navbar />
                 <div className="item-container flex  w-full max-w-[1500px] flex-col p-4 mt-10">
-                    <div className="item-header flex  w-full max-h-[180px] justify-center mb-5">
-                        <img src={`/images/${data.img}`} style={{ filter: "drop-shadow(3px 4px 3px #d3d3d3)" }} />
+                    <div className="item-header flex w-full max-h-[280px] justify-center mb-5 ">
+                        <img className="max-w-[280px]" src={`/images/${data.img}`} style={{ filter: "drop-shadow(3px 4px 3px #d3d3d3)" }} />
                     </div>
-                    <div className="title-container flex w-full justify-center text-4xl font-mono text-[#4A4A4A] mt-5 mb-5 py-1">
+                    <div className="title-container flex w-full justify-center text-4xl font-mono text-[#4A4A4A] mt-2 mb-5 py-1">
                         <span>{data.title}</span>
                     </div>
                     <div className="price-container flex w-full justify-center text-xl font-mono text-[#4A4A4A] mt-3 py-1">
