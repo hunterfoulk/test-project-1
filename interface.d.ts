@@ -7,3 +7,7 @@ interface MenuItem {
     category: string
 }
 
+interface GlobalState {
+    cart: []
+    cartCount: 0
+}

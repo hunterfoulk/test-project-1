@@ -1,4 +1,5 @@
-export const cartReducer = (state: any, action: any) => {
+
+export const cartReducer = (state: GlobalState, action: any) => {
     switch (action.type) {
 
         case 'SET_PRODUCTS':
