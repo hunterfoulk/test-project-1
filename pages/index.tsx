@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect, useReducer } from 'react';
 import Navbar from "../components/navbar"
-
+import Link from "next/link"
 
 export default function Home() {
 
@@ -21,7 +21,9 @@ export default function Home() {
             <span className="mb-5 text-[60px]">Don't Wait!</span>
             <span className="mb-5 text-xl text-[#EE3367] ">Get Started With Your Order. </span>
             <div className="flex justify-center md:justify-start">
-              <button className="focus:outline-none min-w-[100px] bg-[#EE3367] px-3 py-2 rounded-md text-white shadow-md outlin hover:bg-[#dc295a]">Start Order</button>
+              <Link href="/menu">
+                <button className="focus:outline-none min-w-[100px] bg-[#EE3367] px-3 py-2 rounded-md text-white shadow-md outlin hover:bg-[#dc295a]">Start Order</button>
+              </Link>
             </div>
           </div>
         </div>

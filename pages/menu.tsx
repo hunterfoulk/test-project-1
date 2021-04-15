@@ -1,7 +1,6 @@
 
 import Navbar from "../components/navbar"
 import React, { useState, useEffect, useReducer } from 'react';
-import Card from "../components/card"
 import All from "../components/all"
 import Breakfast from "../components/breakfast"
 import Lunch from "../components/lunch"
@@ -15,7 +14,7 @@ interface Props {
 
 const Menu: React.FC<Props> = ({ menu }) => {
     const [tab, setTab] = useState<string>("All")
-    const [data, setData] = useState<MenuItem[]>(menu)
+
 
 
 
@@ -56,7 +55,7 @@ export default Menu
 
 
 
-export const getStaticProps = async () => {
+export const getServerSideProps = async () => {
 
     const resp = await fetch('http://localhost:3000/api/menu');
     const json = await resp.json();
