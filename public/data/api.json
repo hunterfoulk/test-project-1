@@ -1,0 +1,117 @@
+[
+	{
+		"id": 1,
+		"img": "steakimage.svg",
+    "category":"Dinner",
+    "title": "Steak",
+    "price": 14.99,
+     "sides": ["Sweet Potato", "Rice", "Mashed Potatoes"],
+     "description":"Our steak dinner is the best and most delicious steak in town along with our variety of side choices!",
+      "cals":920,
+    "reviews": [{}, {}, {}]
+
+	},
+
+	{
+		"id": 2,
+			"img": "hamburgerimage.svg",
+      "category":"Dinner",
+        "title": "Cheeseburger",
+        "price": 8.99,
+        "sides": ["Fries", "Mashed Potatoes", "Onion Rings"],
+              "description":"Our Cheeseburer dinner is the juiciest and most delicious burger in town along with our variety of side choices!",
+         "cals":700,
+         "reviews": [{}, {}, {}]
+	},
+
+    {
+		"id": 3,
+		"img": "clubimage.svg",
+    "category":"Lunch",
+    "title": "Club Sandwich",
+   "price": 8.99,
+    "sides": ["Fries", "Salad", "Onion Rings"],
+          "description":"Our club sandwich lunch is delicious with our variety of side choices!",
+    "cals":600,
+    "reviews": [{}, {}, {}]
+	},
+    {
+	    "id": 4,
+				"img": "shrimpimage.svg",
+      "category":"Dinner",
+        "title": "Shrimp Basket",
+        "price": 10.99,
+        "sides": ["Fries", "Onion Rings", "Salad"],
+              "description":"Our shrimp basket dinner is delicious with our variety of side choices!",
+        "reviews": [{}, {}, {}]
+	},
+    {
+		"id": 5,
+		"img": "chickenimage.svg",
+      "category":"Dinner",
+        "title": "Chicken Basket",
+        "price": 12.99,
+        "sides": ["Steak", "Potatoes", "Vegetables"],
+                  "description":"Our chicken basket dinner is delicious with our variety of side choices!",
+         "cals":540,
+         "reviews": [{}, {}, {}]
+	},
+    {
+		"id": 6,
+			"img": "pizzaimage.svg",
+      "category":"Lunch",
+        "title": "Pizza",
+        "price": 10.99,
+          "cals":550,
+        "sides": ["Salamon", "Herbs", "Tomato"],
+                  "description":"Our pizza is amazing and considered the best in town!",
+         "reviews": [{}, {}, {}]
+	},
+      {
+		"id": 7,
+			"img": "tofuimage.svg",
+      "category":"Lunch",
+        "title": "Tofu Soup",
+          "cals":370,
+         "titletwo": "Tofu Soup5sfasdfas fasdf adf",
+        "price": 10.99,
+        "sides": ["Salad", "Bread", "Tomato"],
+          "description":"Our tofo soup is delicious with our variety of side choices!",
+         "reviews": [{}, {}, {}]
+	},
+     {
+		"id": 8,
+			"img": "yogurtimage.svg",
+      "category":"Breakfast",
+        "title": "Greek Yogurt Bowl",
+        "price": 10.99,
+          "cals":310,
+        "sides": ["Fruit", "Granola","Nuts"],
+          "description":"Our yogurt breakfast is delicious with our variety of side choices!",
+         "reviews": [{}, {}, {}]
+	},
+    {
+		"id": 9,
+			"img": "pancakeimage.svg",
+      "category":"Breakfast",
+        "title": "Pancake Stack",
+        "price": 10.99,
+          "cals":870,
+        "sides": ["Fruit", "Granola","Nuts"],
+           "description":"Our pancake stack breakfast is delicious with our variety of side choices!",
+         "reviews": [{}, {}, {}]
+	},
+      {
+		"id": 10,
+			"img": "eggsimage.svg",
+      "category":"Breakfast",
+        "title": "Eggs & Bacon",
+        "price": 10.99,
+          "cals":545,
+        "sides": ["Fruit", "Granola","Nuts"],
+        "description":"Our egg breakfast is delicious with our variety of side choices!",
+         "reviews": [{}, {}, {}]
+	}
+  
+  
+]
