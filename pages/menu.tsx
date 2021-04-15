@@ -54,15 +54,18 @@ const Menu: React.FC<Props> = ({ menu }) => {
 export default Menu
 
 
-
+//Would want to use getStaticProps here and hit a server endpoint instead of the Next Api route so the markup and be reused on each request.
 export const getServerSideProps = async () => {
 
     const resp = await fetch('http://localhost:3000/api/menu');
     const json = await resp.json();
+
+
 
     return {
         props: {
             menu: json
         },
     }
+
 }
