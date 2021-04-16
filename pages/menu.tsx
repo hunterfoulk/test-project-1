@@ -39,6 +39,7 @@ const Menu: React.FC<Props> = ({ menu }) => {
                     </div>
                     <div className="content-container max-w-[1300px] w-full flex flex-wrap justify-around box-border pt-10 pb-20" >
 
+                        {/* Filter and render the speific category of items you want to see */}
                         {tab === "All" ? <All menu={menu} /> : null}
                         {tab === "Breakfast" ? <Breakfast menu={menu} /> : null}
                         {tab === "Lunch" ? <Lunch menu={menu} /> : null}

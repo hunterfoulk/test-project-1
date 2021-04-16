@@ -22,14 +22,14 @@ const fetcher = async (url) => {
 }
 
 const MenuItem: React.FC<Props> = ({ menuItem }) => {
-    const { query } = useRouter()
-    const { data, error } = useSWR(() => query.id && `/api/${query.id}`, fetcher)
+    const { query } = useRouter() //get query paramater in url string
+    const { data, error } = useSWR(() => query.id && `/api/${query.id}`, fetcher) //fetch specific item in menu from query parameter in url.
     const [message, setMessage] = useState<string>("")
 
 
+    //Add new review to dish.
     const SubmitReview = () => {
         const copy = [...data.reviews]
-
         let review = {
             name: "anonymous",
             message: message
