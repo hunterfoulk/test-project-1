@@ -39,7 +39,10 @@ const Navbar: React.FC<Props> = ({ }) => {
                         </Link>
 
                         <span className="">Rewards</span>
-                        <span className="cursor-pointer" ref={btnRef} onClick={onOpen}><FaShoppingBag /></span>
+                        <div className="relative">
+                            {cartData.cart.length > 0 ? <div className="absolute w-[10px] h-[10px] rounded-lg bg-red-500 right-[-4px] bottom-2"></div> : null}
+                            <span className="cursor-pointer" ref={btnRef} onClick={onOpen}><FaShoppingBag /></span>
+                        </div>
                         <Drawer
                             isOpen={isOpen}
                             placement="right"

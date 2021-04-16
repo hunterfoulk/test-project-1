@@ -30,12 +30,15 @@ const Card: React.FC<Props> = ({ card, index }) => {
                         <span>${card.price}</span>
 
                     </div>
-                    <div className="card-sides w-full flex justify-around font-mono p-2 mt-2 text-sm text-gray-400">
-
-                        {card.sides.map((side: string) => (
-                            <span>{side}</span>
-                        ))}
-
+                    <div className="card-sides w-full flex justify-around font-mono p-2 mt-2 flex-col">
+                        <div className="flex justify-center text-[#4A4A4A] mb-5">
+                            <span>Sides</span>
+                        </div>
+                        <div className="flex justify-evenly text-sm text-gray-400 ">
+                            {card.sides.map((side: string) => (
+                                <span>{side}</span>
+                            ))}
+                        </div>
                     </div>
                     <div className="card-button-container w-full flex justify-around font-mono p-2 mt-3 mb-3 text-md ">
                         <Link href={`/menu/${card.id}`}>
