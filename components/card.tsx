@@ -49,6 +49,7 @@ const Card: React.FC<Props> = ({ card, index }) => {
                         }}>Add To Cart</button>
 
                     </div>
+
                 </div>
             </div>
         </>

@@ -76,7 +76,9 @@ const Navbar: React.FC<Props> = ({ }) => {
                                         }
                                         {cartData.cart.length === 0 ? null : < div className="checkout-button-container w-full flex items-center justify-center flex-col font-mono">
                                             <span>Total: ${total}</span>
-                                            <button className="button w-1/2 mt-[50px] bg-[#EE3367] px-3 py-2 rounded-md text-white text-lg shadow-lg focus:outline-none hover:bg-[#dc295a] "> Check out</button>
+                                            <button onClick={() => {
+                                                cartDispatch({ type: 'CHECKOUT' })
+                                            }} className="button w-1/2 mt-[50px] bg-[#EE3367] px-3 py-2 rounded-md text-white text-lg shadow-lg focus:outline-none hover:bg-[#dc295a] "> Check out</button>
                                         </div>}
 
                                     </div>

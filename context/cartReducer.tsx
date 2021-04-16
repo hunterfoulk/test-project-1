@@ -16,7 +16,13 @@ export const cartReducer = (state: GlobalState, action: any) => {
                 cartCount: state.cartCount - 1,
 
             };
+        case 'CHECKOUT':
+            return {
+                ...state,
+                cart: [],
+                cartCount: 0
 
+            };
 
         default:
             return state;

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Navbar from "../../components/navbar"
 import useSWR from 'swr'
 import { useRouter } from 'next/router'
@@ -24,7 +24,21 @@ const fetcher = async (url) => {
 const MenuItem: React.FC<Props> = ({ menuItem }) => {
     const { query } = useRouter()
     const { data, error } = useSWR(() => query.id && `/api/${query.id}`, fetcher)
-    console.log("DATA", data)
+    const [message, setMessage] = useState<string>("")
+
+
+    const SubmitReview = () => {
+        const copy = [...data.reviews]
+
+        let review = {
+            name: "anonymous",
+            message: message
+        }
+
+        let newArr = [...copy, review]
+        data.reviews = newArr
+        setMessage("")
+    }
 
 
 
@@ -33,7 +47,7 @@ const MenuItem: React.FC<Props> = ({ menuItem }) => {
 
     return (
         <>
-            < div className="min-h-screen w-full flex flex-col items-center bg-white font-mono ">
+            < div className="min-h-screen w-full flex flex-col items-center bg-white font-mono pb-12">
                 <Navbar />
                 <div className="item-container flex  w-full max-w-[1500px] flex-col p-4 mt-10">
                     <div className="item-header flex w-full max-h-[280px] justify-center mb-5 ">
@@ -69,7 +83,23 @@ const MenuItem: React.FC<Props> = ({ menuItem }) => {
                             <span>{data.description}</span>
                         </div>
                     </div>
-                </div >
+                    <div className="reviews-container flex w-full justify-center flex-col items-center mt-5">
+                        <div className=" flex w-[400px] max-w-full mt-5"><span className="font-momo text-3xl ">Reviews</span></div>
+                        <div className=" flex w-[400px] max-w-full mt-5 flex-col">
+                            {data.reviews.map((data: any) => (
+                                <>
+                                    <span className="text-lg">{data.name}</span>
+                                    <span>{data.message}</span>
+                                </>
+                            ))}
+                        </div>
+                        <div className=" flex w-[400px] max-w-full mt-5 flex-col">
+                            <input placeholder="Leave review..." className="bg-gray-200 py-1 px-1 rounded-sm " value={message} onChange={(e) => setMessage(e.target.value)} />
+                            <button className="mt-3 py-1 rounded-sm bg-[#EE3367] text-white hover:bg-[#dc295a] focus:outline-none " onClick={() => SubmitReview()}>Leave Review</button>
+                        </div>
+
+                    </div>
+                </div>
             </div>
         </>
     )

@@ -8,7 +8,7 @@
      "sides": ["Sweet Potato", "Rice", "Mashed Potatoes"],
      "description":"Our Steak Dinner is the best and most delicious steak in town along with our variety of side choices!",
       "cals":920,
-    "reviews": [{}, {}, {}]
+    "reviews": []
 
 	},
 
@@ -21,7 +21,7 @@
         "sides": ["Salad", "Bread", "Onion Rings"],
           "description":"Our Salmon Salad dinner is the and most delicious salmon in town along with our variety of side choices!",
          "cals":700,
-         "reviews": [{}, {}, {}]
+         "reviews": []
 	},
 
     {
@@ -33,7 +33,7 @@
     "sides": ["Fries", "Greens", "Potatoes"],
           "description":"Our Fish Sticks lunch is delicious with our variety of side choices!",
     "cals":600,
-    "reviews": [{}, {}, {}]
+    "reviews": []
 	},
     {
 	    "id": 4,
@@ -43,7 +43,7 @@
         "price": 10.99,
         "sides": ["Ham", "Vegetables", "Greens"],
        "description":"Our Pasta Dish Dinner is delicious with our variety of side choices!",
-        "reviews": [{}, {}, {}]
+        "reviews": []
 	},
     {
 		"id": 5,
@@ -52,9 +52,9 @@
         "title": "Pancake Stack",
         "price": 12.99,
         "sides": ["toast", "Eggs", "Fruit"],
-                "description":"Our Pancake Stack Breakfast is delicious with our variety of side choices!",
+          "description":"Our Pancake Stack Breakfast is delicious with our variety of side choices!",
          "cals":540,
-         "reviews": [{}, {}, {}]
+         "reviews": [{"name":"anonymous","message":"Great dish I love it!"}]
 	},
     {
 		"id": 6,
@@ -65,7 +65,7 @@
     "cals":550,
     "sides": ["Potatoes", "Greens", "Vegetables"],
      "description":"Our Brisket is amazing and considered the best in town!",
-     "reviews": [{}, {}, {}]
+     "reviews": []
 	},
       {
 		"id": 7,
@@ -76,7 +76,7 @@
         "price": 10.99,
         "sides": ["Salad", "Bread", "Tomato"],
           "description":"Our Pastaroni Dish is delicious with our variety of side choices!",
-         "reviews": [{}, {}, {}]
+         "reviews": []
 	},
      {
 		"id": 8,
@@ -87,7 +87,7 @@
           "cals":310,
         "sides": ["Salad", "Rice","Bread"],
           "description":"Our Salmon Dinner is delicious with our variety of side choices!",
-         "reviews": [{}, {}, {}]
+         "reviews": []
 	},
     {
 		"id": 9,
@@ -98,7 +98,7 @@
           "cals":870,
         "sides": ["Bread", "Salad","Greens"],
            "description":"Our Spaghetti dish is delicious with our variety of side choices!",
-         "reviews": [{}, {}, {}]
+         "reviews": []
 	},
       {
 		"id": 10,
@@ -109,7 +109,7 @@
           "cals":545,
         "sides": ["Fruit", "Granola","Toast"],
         "description":"Our Egg Breakfast is delicious with our variety of side choices!",
-         "reviews": [{}, {}, {}]
+         "reviews": []
 	}
   
   
