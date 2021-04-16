@@ -57,7 +57,7 @@ const Navbar: React.FC<Props> = ({ }) => {
 
                                                 <div className="cart-card w-full flex mb-5 p-2 bg-[#FAFAFC] ">
                                                     <div className="cart-image-container flex flex-1 justify-center filter drop-shadow-xl py-2 min-h-[120px] font-mono">
-                                                        <img className="w-1/2 h-full" src={`/images/${item.img}`} />
+                                                        <img className="w-full h-full" src={`/images/${item.img}`} />
                                                     </div>
                                                     <div className="cart-text-container flex flex-1 flex-col items-center justify-between py-2 font-mono">
                                                         <span>{item.title}</span>
