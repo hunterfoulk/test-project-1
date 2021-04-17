@@ -17,11 +17,8 @@ const Menu: React.FC<Props> = ({ menu }) => {
 
 
 
-
-
     return (
         <>
-
 
             <div className="min-h-screen w-full flex flex-col font-mono">
                 <Navbar />
@@ -31,7 +28,7 @@ const Menu: React.FC<Props> = ({ menu }) => {
                     <div className="flex w-full max-w-[1300px] px-12 py-3 mb-5 mt-2 text-4xl">
                         <span>Menu</span>
                     </div>
-                    <div className="filter-bar flex w-full max-w-[1300px] justify-evenly text-lg mb-5">
+                    <div className="filter-bar flex w-full max-w-[1300px] justify-evenly text-lg mb-5 ">
                         <span className="cursor-pointer" onClick={() => setTab("All")} style={tab === "All" ? { borderBottom: "1px solid #EE3367" } : null}>All</span>
                         <span className="cursor-pointer" onClick={() => setTab("Breakfast")} style={tab === "Breakfast" ? { borderBottom: "1px solid #EE3367" } : null}>Breakfast</span>
                         <span className="cursor-pointer" onClick={() => setTab("Lunch")} style={tab === "Lunch" ? { borderBottom: "1px solid #EE3367" } : null}>Lunch</span>
@@ -48,6 +45,7 @@ const Menu: React.FC<Props> = ({ menu }) => {
                     </div>
                 </div>
             </div>
+
         </>
     )
 }
@@ -60,7 +58,6 @@ export const getServerSideProps = async () => {
 
     const resp = await fetch('http://localhost:3000/api/menu');
     const json = await resp.json();
-
 
 
     return {
