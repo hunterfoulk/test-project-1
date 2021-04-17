@@ -5,6 +5,7 @@ import All from "../components/all"
 import Breakfast from "../components/breakfast"
 import Lunch from "../components/lunch"
 import Dinner from "../components/dinner"
+import useSWR from 'swr'
 
 interface Props {
     menu: MenuItem[]
@@ -14,8 +15,8 @@ interface Props {
 
 const Menu: React.FC<Props> = ({ menu }) => {
     const [tab, setTab] = useState<string>("All")
-
-
+    const { data } = useSWR('/api/menu', { initialData: menu })
+    console.log("dataaa", data)
 
     return (
         <>
@@ -37,10 +38,10 @@ const Menu: React.FC<Props> = ({ menu }) => {
                     <div className="content-container max-w-[1300px] w-full flex flex-wrap justify-around box-border pt-10 pb-20" >
 
                         {/* Filter and render the speific category of items you want to see */}
-                        {tab === "All" ? <All menu={menu} /> : null}
-                        {tab === "Breakfast" ? <Breakfast menu={menu} /> : null}
-                        {tab === "Lunch" ? <Lunch menu={menu} /> : null}
-                        {tab === "Dinner" ? <Dinner menu={menu} /> : null}
+                        {tab === "All" ? <All menu={data} /> : null}
+                        {tab === "Breakfast" ? <Breakfast menu={data} /> : null}
+                        {tab === "Lunch" ? <Lunch menu={data} /> : null}
+                        {tab === "Dinner" ? <Dinner menu={data} /> : null}
 
                     </div>
                 </div>
