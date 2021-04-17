@@ -86,7 +86,7 @@ const MenuItem: React.FC<Props> = ({ menuItem }) => {
                     <div className="reviews-container flex w-full justify-center flex-col items-center mt-5">
                         <div className=" flex w-[400px] max-w-full mt-5"><span className="font-momo text-3xl ">Reviews</span></div>
                         <div className=" flex w-[400px] max-w-full mt-5 flex-col">
-                            {data.reviews.map((data: any) => (
+                            {data.reviews.map((data) => (
                                 <>
                                     <span className="text-lg">{data.name}</span>
                                     <span>{data.message}</span>

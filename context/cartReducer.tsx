@@ -12,7 +12,7 @@ export const cartReducer = (state: GlobalState, action: any) => {
         case 'FILTER_PRODUCTS':
             return {
                 ...state,
-                cart: state.cart.filter((item, index) => index !== action.index),// filter cart by id passed into the reducer.
+                cart: state.cart.filter((item, index) => index !== action.index), // filter cart by id passed into the reducer.
                 cartCount: state.cartCount - 1,
 
             };

@@ -13,6 +13,8 @@ const Card: React.FC<Props> = ({ card, index }) => {
     const { dispatch: cartDispatch, cartData } = useContext(CartContext);
 
 
+
+
     return (
         <>
             <div className="card relative min-w-[320px] max-w-[320px] bg-white flex flex-col mx-10 items-stretch rounded-lg mb-20 mt-12" style={{ boxShadow: "0 8px 18px 1px #d3d3d3" }}>

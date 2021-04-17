@@ -15,14 +15,14 @@ export default function Home() {
 
       {/* Header */}
       <div className="w-full bg-white max-w-[1500px] flex mt-20 rounded-lg py-2 flex-row">
-        <div className="flex-1 flex items-center justify-center">
-          <div className="w-auto max-w-[100%] flex flex-col">
+        <div className="flex-1 flex items-center justify-center ">
+          <div className="flex items-center md:items-start w-auto max-w-[100%] flex flex-col">
             <span className="mb-3 text-[42px]">Are You Hungry?</span>
             <span className="mb-5 text-[60px]">Don't Wait!</span>
             <span className="mb-5 text-xl text-[#EE3367] ">Get Started With Your Order. </span>
             <div className="flex justify-center md:justify-start">
               <Link href="/menu">
-                <button className="focus:outline-none min-w-[100px] bg-[#EE3367] px-3 py-2 rounded-md text-white shadow-md outlin hover:bg-[#dc295a]">Start Order</button>
+                <button className="focus:outline-none min-w-[100px] bg-[#EE3367] px-3 py-2 rounded-md text-white shadow-md hover:bg-[#dc295a]">Start Order</button>
               </Link>
             </div>
           </div>
