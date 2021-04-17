@@ -5,6 +5,7 @@ interface MenuItem {
     img: string
     sides: string[]
     category: string
+    ,
 }
 
 interface GlobalState {
