@@ -9,11 +9,9 @@ function MyApp({ Component, pageProps }) {
   return <>
     <CartContextProvider>
       <ChakraProvider>
-        <SWRConfig
-          value={{ fetcher: (url) => fetch(url).then(r => r.data) }}
-        >
-          <Component {...pageProps} />
-        </SWRConfig>
+
+        <Component {...pageProps} />
+
       </ChakraProvider>
     </CartContextProvider>
   </>

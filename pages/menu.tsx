@@ -6,17 +6,34 @@ import Breakfast from "../components/breakfast"
 import Lunch from "../components/lunch"
 import Dinner from "../components/dinner"
 import useSWR from 'swr'
-
+import Loading from "../components/loading"
+import Error from "../components/error"
 interface Props {
     menu: MenuItem[]
 }
 
 
+const fetcher = async (url) => {
+    const res = await fetch(url)
+    const data = await res.json()
+    console.log("FETCHER DATA", data)
+    console.log("FETCHHER FIEDD")
+    if (res.status !== 200) {
+        throw new (Error as any)("ERROR")
+    }
+    return data
+}
 
-const Menu: React.FC<Props> = ({ menu }) => {
+const Menu: React.FC<Props> = () => {
     const [tab, setTab] = useState<string>("All")
-    const { data } = useSWR('/api/menu', { initialData: menu })
+    const { data, error } = useSWR('/api/menu', fetcher)
     console.log("dataaa", data)
+
+
+
+    if (!data) return <Loading />
+    if (error) return <Error />
+
 
     return (
         <>
@@ -38,10 +55,10 @@ const Menu: React.FC<Props> = ({ menu }) => {
                     <div className="content-container max-w-[1300px] w-full flex flex-wrap justify-around box-border pt-10 pb-20" >
 
                         {/* Filter and render the speific category of items you want to see */}
-                        {tab === "All" ? <All menu={data} /> : null}
-                        {tab === "Breakfast" ? <Breakfast menu={data} /> : null}
-                        {tab === "Lunch" ? <Lunch menu={data} /> : null}
-                        {tab === "Dinner" ? <Dinner menu={data} /> : null}
+                        {tab === "All" ? <All data={data} /> : null}
+                        {tab === "Breakfast" ? <Breakfast data={data} /> : null}
+                        {tab === "Lunch" ? <Lunch data={data} /> : null}
+                        {tab === "Dinner" ? <Dinner data={data} /> : null}
 
                     </div>
                 </div>
@@ -54,17 +71,4 @@ const Menu: React.FC<Props> = ({ menu }) => {
 export default Menu
 
 
-//Would want to use getStaticProps here and hit a server endpoint instead of the Next Api route so the markup and be reused on each request.
-export const getServerSideProps = async () => {
 
-    const resp = await fetch('http://localhost:3000/api/menu');
-    const json = await resp.json();
-
-
-    return {
-        props: {
-            menu: json
-        },
-    }
-
-}

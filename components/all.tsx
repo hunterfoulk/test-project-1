@@ -1,15 +1,15 @@
 import React from 'react'
 import Card from "../components/card"
 interface Props {
-    menu: MenuItem[]
+    data: MenuItem[]
 }
 
-const All: React.FC<Props> = ({ menu }) => {
+const All: React.FC<Props> = ({ data }) => {
     return (
         <>
-            {menu.map((card: MenuItem, index: number) => (
+            {data.map((card: MenuItem, index: number) => (
                 <>
-                    <Card card={card} index={index} />
+                    <Card card={card} index={index} data={data} />
                 </>
             ))}
         </>

@@ -1,26 +1,35 @@
-import React, { useState, useRef, useContext } from 'react'
+import React, { useState, useRef, useContext, useEffect } from 'react'
 import { CartContext } from "../context/cartContext"
 import Link from 'next/link'
-
+import { motion } from "framer-motion";
 
 interface Props {
     card: MenuItem
     index: number
+    data: MenuItem[]
 
 }
 
-const Card: React.FC<Props> = ({ card, index }) => {
+const Card: React.FC<Props> = ({ card, index, data }) => {
     const { dispatch: cartDispatch, cartData } = useContext(CartContext);
+    const ref = useRef(false)
 
+    useEffect(() => {
 
+        if (data) {
+            ref.current = true
+        } else {
+            ref.current = false
 
+        }
+    }, [data])
 
     return (
         <>
             <div className="card relative min-w-[320px] max-w-[320px] bg-white flex flex-col mx-10 items-stretch rounded-lg mb-20 mt-12" style={{ boxShadow: "0 8px 18px 1px #d3d3d3" }}>
                 <div className="card-image-container min-h-[100px] w-full flex flex-col justify-center ">
 
-                    <img className="image absolute w-[50%] top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/3" src={`/images/${card.img}`} style={{ filter: "drop-shadow(3px 4px 3px #d3d3d3)" }} />
+                    <img className="image absolute min-w-[50%] w-[50%] top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/3" src={`/images/${card.img}`} style={{ filter: "drop-shadow(3px 4px 3px #d3d3d3)" }} />
 
                 </div>
                 <div className="card-text-container h-full w-full p-3" >

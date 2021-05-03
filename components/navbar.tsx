@@ -5,6 +5,9 @@ import { Drawer, DrawerOverlay, DrawerContent } from "@chakra-ui/react"
 import { useDisclosure } from "@chakra-ui/react"
 import { CartContext } from "../context/cartContext"
 import Link from "next/link"
+import Swal from 'sweetalert2'
+
+
 interface Props {
 
 }
@@ -14,8 +17,8 @@ const Navbar: React.FC<Props> = ({ }) => {
     const { dispatch: cartDispatch, cartData } = useContext(CartContext);
     const btnRef = React.useRef()
     const [tab, setTab] = useState("Home")
-
     const total = cartData.cart.reduce((sum, curr) => sum + curr.price, 0);
+
 
     return (
         <>
@@ -29,7 +32,7 @@ const Navbar: React.FC<Props> = ({ }) => {
                             < span className="hidden sm:block ml-2 cursor-pointer" onClick={() => setTab("Home")}>Hunt's</span>
                         </Link>
                     </div>
-                    <div className="justify-around flex-1 flex items-center text-xl text-[#4A4A4A] ">
+                    <div className="justify-around flex-1 flex items-center text-xl text-[#4A4A4A]">
 
                         <Link href="/">
                             <span className=" cursor-pointer" >Home</span>
@@ -60,7 +63,7 @@ const Navbar: React.FC<Props> = ({ }) => {
 
                                                 <div className="cart-card w-full flex mb-5 p-2 bg-[#FAFAFC] ">
                                                     <div className="cart-image-container flex flex-1 justify-center filter drop-shadow-xl py-2 min-h-[120px] font-mono">
-                                                        <img className="w-full h-full" src={`/images/${item.img}`} />
+                                                        <img className="min-w-full min-h-full" src={`/images/${item.img}`} />
                                                     </div>
                                                     <div className="cart-text-container flex flex-1 flex-col items-center justify-between py-2 font-mono">
                                                         <span>{item.title}</span>
@@ -77,7 +80,15 @@ const Navbar: React.FC<Props> = ({ }) => {
                                         {cartData.cart.length === 0 ? null : < div className="checkout-button-container w-full flex items-center justify-center flex-col font-mono">
                                             <span>Total: ${total}</span>
                                             <button onClick={() => {
+                                                onClose()
+                                                Swal.fire(
+                                                    'Order Completed!',
+                                                    `Your Total Amount Is ${total}`,
+                                                    'success'
+                                                )
+
                                                 cartDispatch({ type: 'CHECKOUT' })
+
                                             }} className="button w-1/2 mt-[50px] bg-[#EE3367] px-3 py-2 rounded-md text-white text-lg shadow-lg focus:outline-none hover:bg-[#dc295a] "> Check out</button>
                                         </div>}
 

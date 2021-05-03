@@ -1,15 +1,15 @@
 import React from 'react'
 import Card from "../components/card"
 interface Props {
-    menu: MenuItem[]
+    data: MenuItem[]
 }
 
-const Breakfast: React.FC<Props> = ({ menu }) => {
+const Breakfast: React.FC<Props> = ({ data }) => {
     return (
         <>
 
-            {menu.filter(item => item.category === "Breakfast").map((card, index) => (
-                <Card card={card} index={index} />
+            {data.filter(item => item.category === "Breakfast").map((card, index) => (
+                <Card card={card} index={index} data={data} />
             ))}
         </>
     )

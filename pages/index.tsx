@@ -28,7 +28,7 @@ export default function Home() {
           </div>
         </div>
         <div className="hidden md:block flex-1 flex ">
-          <img src="/images/foodplate.png" className="" style={{ filter: "drop-shadow(9px 17px 10px #d3d3d3)" }} />
+          <img src="/images/foodplate.png" className="min-h-full" style={{ filter: "drop-shadow(9px 17px 10px #d3d3d3)" }} />
 
         </div>
       </div>
