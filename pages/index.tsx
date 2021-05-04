@@ -2,6 +2,7 @@
 import React, { useState, useEffect, useReducer } from 'react';
 import Navbar from "../components/navbar"
 import Link from "next/link"
+import { motion, AnimateSharedLayout, AnimatePresence } from 'framer-motion';
 
 export default function Home() {
 
@@ -9,7 +10,7 @@ export default function Home() {
   return (
 
 
-    <div className="min-h-screen w-full flex flex-col items-center bg-white font-mono">
+    <motion.div initial={{ opacity: 0 }} animate={{ opacity: [0, 1] }} transition={{ duration: 0.3, delay: 1 / 15 }} className="min-h-screen w-full flex flex-col items-center bg-white font-mono">
       <Navbar />
 
 
@@ -65,7 +66,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-    </div >
+    </motion.div  >
 
 
   )

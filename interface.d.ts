@@ -5,7 +5,15 @@ interface MenuItem {
     img: string
     sides: string[]
     category: string
+    reviews: Review[]
+    cals: number
+    description: string
 
+}
+
+interface Review {
+    name: string;
+    message: string;
 }
 
 interface GlobalState {
