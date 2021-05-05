@@ -45,7 +45,31 @@ const MenuItem: React.FC<Props> = () => {
         setMessage("")
     }
 
+    let easing = [0.6, -0.05, 0.01, 0.99];
 
+    const stagger = {
+        animate: {
+            transition: {
+                staggerChildren: 0.05
+            }
+        }
+    };
+
+    const fadeInUp = {
+        initial: {
+            y: 60,
+            opacity: 0,
+            transition: { duration: 0.6, ease: easing }
+        },
+        animate: {
+            y: 0,
+            opacity: 1,
+            transition: {
+                duration: 0.6,
+                ease: easing
+            }
+        }
+    };
 
 
     if (!data) return <Loading />
@@ -54,27 +78,27 @@ const MenuItem: React.FC<Props> = () => {
 
     return (
         <>
-            <motion.div initial={{ opacity: 0 }} animate={{ opacity: [0, 1] }} transition={{ duration: 0.5, delay: 1 / 15 }} className="min-h-screen w-full flex flex-col items-center bg-white font-mono pb-12" >
+            <motion.div initial='initial' animate='animate' exit={{ opacity: 0 }} className="min-h-screen w-full flex flex-col items-center bg-white font-mono pb-12" >
                 <Navbar />
-                <div className="item-container flex  w-full max-w-[1500px] flex-col p-4 mt-10">
-                    <div className="item-header flex w-full max-h-[280px] justify-center mb-5 ">
+                <motion.div variants={stagger} className="item-container flex  w-full max-w-[1500px] flex-col p-4 mt-10">
+                    <motion.div variants={fadeInUp} className="item-header flex w-full max-h-[280px] justify-center mb-5 ">
                         <img className="max-w-[280px]" src={`/images/${data.img}`} style={{ filter: "drop-shadow(3px 4px 3px #d3d3d3)" }} />
-                    </div>
-                    <div className="title-container flex w-full justify-center text-4xl font-mono text-[#4A4A4A] mt-2 mb-5 py-1">
-                        <span>{data.title}</span>
-                    </div>
-                    <div className="price-container flex w-full justify-center text-xl font-mono text-[#4A4A4A] mt-3 py-1">
+                    </motion.div>
+                    <motion.div variants={fadeInUp} className="title-container flex w-full justify-center text-4xl font-mono text-[#4A4A4A] mt-2 mb-5 py-1">
+                        <motion.span variants={fadeInUp}>{data.title}</motion.span>
+                    </motion.div>
+                    <motion.div variants={fadeInUp} className="price-container flex w-full justify-center text-xl font-mono text-[#4A4A4A] mt-3 py-1">
 
 
 
-                        <div className="flex w-[400px] max-w-full justify-between ">
+                        <motion.div variants={fadeInUp} className="flex w-[400px] max-w-full justify-between ">
                             <span>{data.cals} cals</span>
                             <span>${data.price}</span>
-                        </div>
+                        </motion.div>
 
 
-                    </div>
-                    <div className="sides-container flex w-full justify-center flex-col items-center mt-5">
+                    </motion.div>
+                    <motion.div variants={fadeInUp} className="sides-container flex w-full justify-center flex-col items-center mt-5">
                         <div className=" flex w-[400px] max-w-full mt-5 " ><span className="font-momo text-3xl ">Sides</span></div>
                         <div className="flex justify-between w-[400px] max-w-full mt-6">
                             {data.sides.map((side: string) => (
@@ -82,33 +106,34 @@ const MenuItem: React.FC<Props> = () => {
                             ))}
                         </div>
 
-                    </div>
-                    <div className="sides-container flex w-full justify-center flex-col items-center mt-5">
-                        <div className=" flex w-[400px] max-w-full mt-5" ><span className="font-momo text-3xl ">Description</span></div>
-                        <div className=" flex justify-between w-[400px] max-w-full mt-5">
+                    </motion.div>
+                    <motion.div variants={fadeInUp} className="sides-container flex w-full justify-center flex-col items-center mt-5">
+                        <motion.div variants={fadeInUp} className=" flex w-[400px] max-w-full mt-5" ><span className="font-momo text-3xl ">Description</span></motion.div>
+                        <motion.div variants={fadeInUp} className=" flex justify-between w-[400px] max-w-full mt-5">
 
                             <span>{data.description}</span>
-                        </div>
-                    </div>
-                    <div className="reviews-container flex w-full justify-center flex-col items-center mt-5">
-                        <div className=" flex w-[400px] max-w-full mt-5"><span className="font-momo text-3xl ">Reviews</span></div>
-                        <div className=" flex w-[400px] max-w-full mt-5 flex-col">
+                        </motion.div>
+
+                    </motion.div>
+                    <motion.div variants={fadeInUp} className="reviews-container flex w-full justify-center flex-col items-center mt-5">
+                        <motion.div variants={fadeInUp} className=" flex w-[400px] max-w-full mt-5"><span className="font-momo text-3xl ">Reviews</span></motion.div>
+                        <motion.div variants={fadeInUp} className=" flex w-[400px] max-w-full mt-5 flex-col">
                             {data.reviews.map((data) => (
                                 <>
                                     <span className="text-lg">{data.name}</span>
                                     <span>{data.message}</span>
                                 </>
                             ))}
-                        </div>
-                        <div className=" flex w-[400px] max-w-full mt-5 flex-col">
+                        </motion.div>
+                        <motion.div variants={fadeInUp} className=" flex w-[400px] max-w-full mt-5 flex-col">
                             <input placeholder="Leave review..." className="bg-gray-200 py-1 px-1 rounded-sm " value={message} onChange={(e) => setMessage(e.target.value)} />
                             <button className="mt-3 py-1 rounded-sm bg-[#EE3367] text-white hover:bg-[#dc295a] mb-[10px] focus:outline-none " onClick={() => SubmitReview()}>Leave Review</button>
                             <button className="mt-3 py-1 rounded-sm bg-[#EE3367] text-white hover:bg-[#dc295a] focus:outline-none " onClick={() => cartDispatch({ type: 'SET_PRODUCTS', item: data })}
                             >Add To Cart</button>
-                        </div>
+                        </motion.div>
 
-                    </div>
-                </div>
+                    </motion.div>
+                </motion.div>
             </motion.div >
         </>
     )
