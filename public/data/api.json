@@ -71,7 +71,7 @@
 		"id": 7,
 			"img": "top-down-pasta.png",
       "category":"Lunch",
-        "title": "Pastaroni dish",
+        "title": "Pastaroni Dish",
           "cals":370,
         "price": 10.99,
         "sides": ["Salad", "Bread", "Tomato"],
