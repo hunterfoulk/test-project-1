@@ -18,22 +18,7 @@ const Navbar: React.FC<Props> = ({ }) => {
     const btnRef = React.useRef()
     const [tab, setTab] = useState("Home")
     const total = cartData.cart.reduce((sum, curr) => sum + curr.price, 0);
-    const [selected, setSelected] = useState(0);
 
-    const links = [
-        {
-            title: "home",
-            color: "#ff0055"
-        },
-        {
-            title: "menu",
-            color: "#0099ff"
-        },
-        {
-            title: "rewards",
-            color: "#22cc88"
-        },
-    ]
 
 
     return (
