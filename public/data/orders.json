@@ -7,17 +7,83 @@
         "address":"1234 Cool Rd",
         "phone":"817-739-1202",
         "amount":12.55,
-        "items":["Salmon Salad", "Fish Sticks", "Pastaroni Dish"]
-      },
-            {
+        "items":[	{
+		"id": 2,
+			"img": "salmon1.png",
+      "category":"Lunch",
+        "title": "Salmon Salad",
+        "price": 8.99,
+        "sides": ["Salad", "Bread", "Onion Rings"],
+          "description":"Our Salmon Salad dinner is the and most delicious salmon in town along with our variety of side choices!",
+         "cals":700,
+         "reviews": []
+	},   {
+		"id": 3,
+		"img": "fishsticks.png",
+    "category":"Lunch",
+    "title": "Fish Sticks",
+   "price": 8.99,
+    "sides": ["Fries", "Greens", "Potatoes"],
+          "description":"Our Fish Sticks lunch is delicious with our variety of side choices!",
+    "cals":600,
+    "reviews": []
+	}, {
+		"id": 7,
+			"img": "top-down-pasta.png",
+      "category":"Lunch",
+        "title": "Pastaroni Dish",
+          "cals":370,
+        "price": 10.99,
+        "sides": ["Salad", "Bread", "Tomato"],
+          "description":"Our Pastaroni Dish is delicious with our variety of side choices!",
+         "reviews": []
+	}]  },
+
+
+
+       {
 		"id": 2,
         "date":"02/25/21",
         "customer":"Jay Riley",
         "address":"1234 Main Street",
         "phone":"817-739-1202",
         "amount":24.75,
-        "items":["Steak", "Brisket", "Pastaroni Dish"]
-      },
+        "items":[{
+		"id": 1,
+		"img": "foodplate.png",
+    "category":"Dinner",
+    "title": "Steak",
+    "price": 14.99,
+     "sides": ["Sweet Potato", "Rice", "Mashed Potatoes"],
+     "description":"Our Steak Dinner is the best and most delicious steak in town along with our variety of side choices!",
+      "cals":920,
+    "reviews": []
+},  
+    {
+		"id": 6,
+		"img": "brisket.png",
+    "category":"Lunch",
+    "title": "Brisket",
+    "price": 10.99,
+    "cals":550,
+    "sides": ["Potatoes", "Greens", "Vegetables"],
+     "description":"Our Brisket is amazing and considered the best in town!",
+     "reviews": []
+	},  
+   {
+		"id": 7,
+			"img": "top-down-pasta.png",
+      "category":"Lunch",
+        "title": "Pastaroni Dish",
+          "cals":370,
+        "price": 10.99,
+        "sides": ["Salad", "Bread", "Tomato"],
+          "description":"Our Pastaroni Dish is delicious with our variety of side choices!",
+         "reviews": []
+	}] },
+  
+
+
             {
 		"id": 3,
         "date":"02/25/21",
@@ -25,8 +91,37 @@
         "address":"1234 1st Ave",
         "phone":"817-739-1202",
         "amount":40.25,
-        "items":["Ham Pasta Dish", "Spaghetti", "Steak"]
-      },
+        "items":[{
+	    "id": 4,
+				"img": "pasta.png",
+      "category":"Dinner",
+        "title": "Ham Pasta Dish",
+        "price": 10.99,
+        "sides": ["Ham", "Vegetables", "Greens"],
+       "description":"Our Pasta Dish Dinner is delicious with our variety of side choices!",
+        "reviews": []
+	},   {
+		"id": 9,
+			"img": "spaghetti.png",
+      "category":"Dinner",
+        "title": "Spaghetti",
+        "price": 10.99,
+          "cals":870,
+        "sides": ["Bread", "Salad","Greens"],
+           "description":"Our Spaghetti dish is delicious with our variety of side choices!",
+         "reviews": []
+	}, {
+		"id": 1,
+		"img": "foodplate.png",
+    "category":"Dinner",
+    "title": "Steak",
+    "price": 14.99,
+     "sides": ["Sweet Potato", "Rice", "Mashed Potatoes"],
+     "description":"Our Steak Dinner is the best and most delicious steak in town along with our variety of side choices!",
+      "cals":920,
+    "reviews": []
+}]},
+
         {
 		"id": 4,
         "date":"02/25/21",
@@ -34,17 +129,78 @@
         "address":"1234 Bourbon Street",
         "phone":"817-739-1202",
         "amount":10.55,
-        "items":["Salmon And Rice", "Brisket", "Pastaroni Dish"]
-      },
-         {
-		"id": 5,
+        "items":[  {
+		"id": 8,
+			"img": "salmon2.png",
+      "category":"Dinner",
+        "title": "Salmon And Rice",
+        "price": 10.99,
+          "cals":310,
+        "sides": ["Salad", "Rice","Bread"],
+          "description":"Our Salmon Dinner is delicious with our variety of side choices!",
+         "reviews": []
+	},   {
+		"id": 6,
+		"img": "brisket.png",
+    "category":"Lunch",
+    "title": "Brisket",
+    "price": 10.99,
+    "cals":550,
+    "sides": ["Potatoes", "Greens", "Vegetables"],
+     "description":"Our Brisket is amazing and considered the best in town!",
+     "reviews": []
+	},     {
+		"id": 7,
+			"img": "top-down-pasta.png",
+      "category":"Lunch",
+        "title": "Pastaroni Dish",
+          "cals":370,
+        "price": 10.99,
+        "sides": ["Salad", "Bread", "Tomato"],
+          "description":"Our Pastaroni Dish is delicious with our variety of side choices!",
+         "reviews": []
+	}]},
+
+
+      {
+	    	"id": 5,
         "date":"02/25/21",
         "customer":"Robert Atlas",
         "address":"1234 Deer Street",
         "phone":"817-739-1202",
         "amount":10.55,
-        "items":["Ham Pasta Dish", "Steak", "Pastaroni Dish"]
-      },
+        "items":[   {
+	    "id": 4,
+				"img": "pasta.png",
+      "category":"Dinner",
+        "title": "Ham Pasta Dish",
+        "price": 10.99,
+        "sides": ["Ham", "Vegetables", "Greens"],
+       "description":"Our Pasta Dish Dinner is delicious with our variety of side choices!",
+        "reviews": []
+	}, {
+		"id": 1,
+		"img": "foodplate.png",
+    "category":"Dinner",
+    "title": "Steak",
+    "price": 14.99,
+     "sides": ["Sweet Potato", "Rice", "Mashed Potatoes"],
+     "description":"Our Steak Dinner is the best and most delicious steak in town along with our variety of side choices!",
+      "cals":920,
+    "reviews": []
+}, {
+		"id": 7,
+			"img": "top-down-pasta.png",
+      "category":"Lunch",
+        "title": "Pastaroni Dish",
+          "cals":370,
+        "price": 10.99,
+        "sides": ["Salad", "Bread", "Tomato"],
+          "description":"Our Pastaroni Dish is delicious with our variety of side choices!",
+         "reviews": []
+	}]},
+
+
        {
 		"id": 6,
         "date":"02/25/21",
@@ -52,7 +208,37 @@
         "address":"1234 Milk Street",
         "phone":"817-739-1202",
         "amount":10.55,
-        "items":["Eggs & Toast", "Salmon And Rice", "Pancake Stack"]
+        "items":[{
+		"id": 10,
+			"img": "eggs1.png",
+      "category":"Breakfast",
+        "title": "Eggs & Toast",
+        "price": 10.99,
+          "cals":545,
+        "sides": ["Fruit", "Granola","Toast"],
+        "description":"Our Egg Breakfast is delicious with our variety of side choices!",
+         "reviews": []
+	}, {
+		"id": 8,
+			"img": "salmon2.png",
+      "category":"Dinner",
+        "title": "Salmon And Rice",
+        "price": 10.99,
+          "cals":310,
+        "sides": ["Salad", "Rice","Bread"],
+          "description":"Our Salmon Dinner is delicious with our variety of side choices!",
+         "reviews": []
+	}, {
+		"id": 5,
+		"img": "pancakes.png",
+      "category":"Breakfast",
+        "title": "Pancake Stack",
+        "price": 12.99,
+        "sides": ["toast", "Eggs", "Fruit"],
+          "description":"Our Pancake Stack Breakfast is delicious with our variety of side choices!",
+         "cals":540,
+         "reviews": [{"name":"anonymous","message":"Great dish I love it!"}]
+	}]
       },
        {
 		"id": 7,
@@ -61,8 +247,38 @@
         "address":"1234 Bourbon Street",
         "phone":"817-739-1202",
         "amount":10.55,
-        "items":["Eggs & Toast", "Salmon And Rice", "Pancake Stack"]
-      },
+        "items":[ {
+		"id": 10,
+			"img": "eggs1.png",
+      "category":"Breakfast",
+        "title": "Eggs & Toast",
+        "price": 10.99,
+          "cals":545,
+        "sides": ["Fruit", "Granola","Toast"],
+        "description":"Our Egg Breakfast is delicious with our variety of side choices!",
+         "reviews": []
+	}, {
+		"id": 8,
+			"img": "salmon2.png",
+      "category":"Dinner",
+        "title": "Salmon And Rice",
+        "price": 10.99,
+          "cals":310,
+        "sides": ["Salad", "Rice","Bread"],
+          "description":"Our Salmon Dinner is delicious with our variety of side choices!",
+         "reviews": []
+	}, {
+		"id": 5,
+		"img": "pancakes.png",
+      "category":"Breakfast",
+        "title": "Pancake Stack",
+        "price": 12.99,
+        "sides": ["toast", "Eggs", "Fruit"],
+          "description":"Our Pancake Stack Breakfast is delicious with our variety of side choices!",
+         "cals":540,
+         "reviews": [{"name":"anonymous","message":"Great dish I love it!"}]
+	}]},
+
        {
 		"id": 8,
         "date":"02/25/21",
@@ -70,8 +286,38 @@
         "address":"1234 Bourbon Street",
         "phone":"817-739-1202",
         "amount":10.55,
-        "items":["Eggs & Toast", "Salmon And Rice", "Pancake Stack"]
-      },
+        "items":[{
+		"id": 10,
+			"img": "eggs1.png",
+      "category":"Breakfast",
+        "title": "Eggs & Toast",
+        "price": 10.99,
+          "cals":545,
+        "sides": ["Fruit", "Granola","Toast"],
+        "description":"Our Egg Breakfast is delicious with our variety of side choices!",
+         "reviews": []
+	}, {
+		"id": 8,
+			"img": "salmon2.png",
+      "category":"Dinner",
+        "title": "Salmon And Rice",
+        "price": 10.99,
+          "cals":310,
+        "sides": ["Salad", "Rice","Bread"],
+          "description":"Our Salmon Dinner is delicious with our variety of side choices!",
+         "reviews": []
+  }, {
+		"id": 5,
+		"img": "pancakes.png",
+      "category":"Breakfast",
+        "title": "Pancake Stack",
+        "price": 12.99,
+        "sides": ["toast", "Eggs", "Fruit"],
+          "description":"Our Pancake Stack Breakfast is delicious with our variety of side choices!",
+         "cals":540,
+         "reviews": [{"name":"anonymous","message":"Great dish I love it!"}]
+	}]},
+
        {
 		"id": 9,
         "date":"02/25/21",
@@ -79,7 +325,37 @@
         "address":"1234 Bourbon Street",
         "phone":"817-739-1202",
         "amount":10.55,
-        "items":["Eggs & Toast", "Salmon And Rice", "Pancake Stack"]
+        "items":[{
+		"id": 10,
+			"img": "eggs1.png",
+      "category":"Breakfast",
+        "title": "Eggs & Toast",
+        "price": 10.99,
+          "cals":545,
+        "sides": ["Fruit", "Granola","Toast"],
+        "description":"Our Egg Breakfast is delicious with our variety of side choices!",
+         "reviews": []
+	}, {
+		"id": 8,
+			"img": "salmon2.png",
+      "category":"Dinner",
+        "title": "Salmon And Rice",
+        "price": 10.99,
+          "cals":310,
+        "sides": ["Salad", "Rice","Bread"],
+          "description":"Our Salmon Dinner is delicious with our variety of side choices!",
+         "reviews": []
+  }, {
+		"id": 5,
+		"img": "pancakes.png",
+      "category":"Breakfast",
+        "title": "Pancake Stack",
+        "price": 12.99,
+        "sides": ["toast", "Eggs", "Fruit"],
+          "description":"Our Pancake Stack Breakfast is delicious with our variety of side choices!",
+         "cals":540,
+         "reviews": [{"name":"anonymous","message":"Great dish I love it!"}]
+	}]
       },
            {
 		"id": 10,
@@ -88,8 +364,37 @@
         "address":"1234 Bourbon Street",
         "phone":"817-739-1202",
         "amount":10.55,
-        "items":["Eggs & Toast", "Salmon And Rice", "Pancake Stack"]
-      },
+        "items":[   {
+		"id": 10,
+			"img": "eggs1.png",
+      "category":"Breakfast",
+        "title": "Eggs & Toast",
+        "price": 10.99,
+          "cals":545,
+        "sides": ["Fruit", "Granola","Toast"],
+        "description":"Our Egg Breakfast is delicious with our variety of side choices!",
+         "reviews": []
+	},  {
+		"id": 8,
+			"img": "salmon2.png",
+      "category":"Dinner",
+        "title": "Salmon And Rice",
+        "price": 10.99,
+          "cals":310,
+        "sides": ["Salad", "Rice","Bread"],
+          "description":"Our Salmon Dinner is delicious with our variety of side choices!",
+         "reviews": []
+	},  {
+		"id": 5,
+		"img": "pancakes.png",
+      "category":"Breakfast",
+        "title": "Pancake Stack",
+        "price": 12.99,
+        "sides": ["toast", "Eggs", "Fruit"],
+          "description":"Our Pancake Stack Breakfast is delicious with our variety of side choices!",
+         "cals":540,
+         "reviews": [{"name":"anonymous","message":"Great dish I love it!"}]
+	}]},
            {
 		"id": 11,
         "date":"02/25/21",
@@ -97,6 +402,36 @@
         "address":"1234 Bourbon Street",
         "phone":"817-739-1202",
         "amount":10.55,
-        "items":["Eggs & Toast", "Salmon And Rice", "Pancake Stack"]
+        "items":[{
+		"id": 10,
+			"img": "eggs1.png",
+      "category":"Breakfast",
+        "title": "Eggs & Toast",
+        "price": 10.99,
+          "cals":545,
+        "sides": ["Fruit", "Granola","Toast"],
+        "description":"Our Egg Breakfast is delicious with our variety of side choices!",
+         "reviews": []
+	},  {
+		"id": 8,
+			"img": "salmon2.png",
+      "category":"Dinner",
+        "title": "Salmon And Rice",
+        "price": 10.99,
+          "cals":310,
+        "sides": ["Salad", "Rice","Bread"],
+          "description":"Our Salmon Dinner is delicious with our variety of side choices!",
+         "reviews": []
+	}, {
+		"id": 5,
+		"img": "pancakes.png",
+      "category":"Breakfast",
+        "title": "Pancake Stack",
+        "price": 12.99,
+        "sides": ["toast", "Eggs", "Fruit"],
+          "description":"Our Pancake Stack Breakfast is delicious with our variety of side choices!",
+         "cals":540,
+         "reviews": [{"name":"anonymous","message":"Great dish I love it!"}]
+	}]
       }
 ]
