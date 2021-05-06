@@ -89,10 +89,7 @@ const Menu: React.FC<Props> = () => {
                                 </motion.li>
                             ))}
 
-                            {/* <span className="cursor-pointer" onClick={() => setTab("All")} style={tab === "All" ? { borderBottom: "1px solid #EE3367" } : null}>All</span>
-                        <span className="cursor-pointer" onClick={() => setTab("Breakfast")} style={tab === "Breakfast" ? { borderBottom: "1px solid #EE3367" } : null}>Breakfast</span>
-                        <span className="cursor-pointer" onClick={() => setTab("Lunch")} style={tab === "Lunch" ? { borderBottom: "1px solid #EE3367" } : null}>Lunch</span>
-                        <span className="cursor-pointer" onClick={() => setTab("Dinner")} style={tab === "Dinner" ? { borderBottom: "1px solid #EE3367" } : null}>Dinner</span> */}
+
                         </ol>
                     </AnimateSharedLayout>
                     <div className="content-container max-w-[1300px] w-full flex flex-wrap justify-around box-border pt-10 pb-20" >

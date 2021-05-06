@@ -78,7 +78,7 @@ const MenuItem: React.FC<Props> = () => {
 
     return (
         <>
-            <motion.div initial='initial' animate='animate' exit={{ opacity: 0 }} className="min-h-screen w-full flex flex-col items-center bg-white font-mono pb-12" >
+            <motion.div initial='initial' animate='animate' exit={{ opacity: 0 }} className="min-h-screen w-full flex flex-col items-center bg-white font-mono pb-12 overflow-y-hidden" >
                 <Navbar />
                 <motion.div variants={stagger} className="item-container flex  w-full max-w-[1500px] flex-col p-4 mt-10">
                     <motion.div variants={fadeInUp} className="item-header flex w-full max-h-[280px] justify-center mb-5 ">

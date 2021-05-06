@@ -44,7 +44,7 @@ const Navbar: React.FC<Props> = ({ }) => {
                         </Link>
 
                         <Link href="/orders">
-                            <span className="cursor-pointer " >Orders</span>
+                            <span className="cursor-pointer">Orders</span>
                         </Link>
 
                         <CartIcon cartData={cartData} btnRef={btnRef} onOpen={onOpen} />

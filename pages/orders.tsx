@@ -8,23 +8,14 @@ import { FaRegCreditCard } from 'react-icons/fa';
 import { FaCartArrowDown } from 'react-icons/fa';
 import { FaStar } from 'react-icons/fa';
 import { SearchIcon } from "@chakra-ui/icons"
-import {
-    Table,
-    Thead,
-    Tbody,
-    Tfoot,
-    Tr,
-    Th,
-    Td,
-    TableCaption,
-    InputGroup,
-    Input,
-    InputLeftElement
-} from "@chakra-ui/react"
+import { Table, Thead, Tbody, Tfoot, Tr, Th, Td, TableCaption, InputGroup, Input, InputLeftElement } from "@chakra-ui/react"
+import Modal from "../components/modal"
+import List from "../components/list"
 
 interface Props {
 
 }
+
 
 const fetcher = async (url) => {
     const res = await fetch(url)
@@ -37,9 +28,11 @@ const fetcher = async (url) => {
 
 const Orders: React.FC<Props> = ({ }) => {
     const { data, error } = useSWR('/api/orders', fetcher)
-
-
-
+    const [selectedId, setSelectedId] = useState(null)
+    const [isToggled, setToggled] = useState(false)
+    const [order, setOrder] = useState({})
+    const [orderTotal, setTotal] = useState(0)
+    const [term, setTerm] = useState("")
 
 
     if (!data) return <Loading />
@@ -53,7 +46,7 @@ const Orders: React.FC<Props> = ({ }) => {
 
     return (
         <>
-            <div className="min-h-screen w-full flex items-center flex-col font-mono px-2">
+            <div className="min-h-screen w-full flex items-center flex-col font-mono px-2 pb-3">
                 <Navbar />
                 <div className="orders-bar w-full max-w-[1300px] flex flex-col mt-[10px] px-2" >
                     <div className="orders-bar w-full flex flex-row pb-[30px] pt-[20px] justify-between">
@@ -105,9 +98,7 @@ const Orders: React.FC<Props> = ({ }) => {
 
                     </div>
 
-                    <div className="search-container flex w-full max-w-[1300px] flex flex-col" >
-                        <h1 className="text-2xl">Orders</h1>
-                    </div>
+
 
                     <div className="search-container flex w-full max-w-[1300px] flex flex-col mt-[20px] mb-[10px]" >
                         <InputGroup >
@@ -115,10 +106,10 @@ const Orders: React.FC<Props> = ({ }) => {
                                 pointerEvents="none"
                                 children={<SearchIcon color="gray.300" />}
                             />
-                            <Input type="tel" placeholder="Search..." />
+                            <Input type="tel" placeholder="Search..." value={term} onChange={(e) => setTerm(e.target.value)} />
                         </InputGroup>
                     </div>
-                    <div className="w-full max-w-[1300px] max-h-[560px] overflow-y-scroll" style={{ boxShadow: "0 8px 18px 1px #d3d3d3" }}>
+                    <div className="w-full max-w-[1300px] max-h-[full] overflow-y-scroll sm:max-h-[560px]" style={{ boxShadow: "0 8px 18px 1px #d3d3d3" }}>
                         <Table variant="simple">
 
                             <Thead className="bg-[#EE3367] ">
@@ -132,21 +123,14 @@ const Orders: React.FC<Props> = ({ }) => {
                             </Thead>
 
 
-                            <Tbody className="w-full overflow-y-scroll">
+                            <Tbody className="w-full overflow-y-scroll ">
 
-                                {data.map((order: any) => (
-                                    <Tr className="cursor-pointer hover:bg-gray-50">
-                                        <Td>{order.id}</Td>
-                                        <Td>{order.customer}</Td>
-                                        <Td >{order.address}</Td>
-                                        <Td >{order.phone}</Td>
-                                        <Td >${order.amount}</Td>
-                                    </Tr>
-                                ))}
+                                <List setOrder={setOrder} setToggled={setToggled} setTotal={setTotal} data={data} term={term} />
 
                             </Tbody>
 
                         </Table>
+                        <Modal setToggled={setToggled} isToggled={isToggled} order={order} orderTotal={orderTotal} />
                     </div>
                 </div>
             </div>
