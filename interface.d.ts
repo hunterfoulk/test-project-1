@@ -11,6 +11,17 @@ interface MenuItem {
 
 }
 
+interface Order {
+    id: number
+    date: string
+    customer: string
+    address: string
+    phone: string
+    amount: number
+    items: MenuItem[]
+}
+
+
 interface Review {
     name: string;
     message: string;

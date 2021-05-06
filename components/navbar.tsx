@@ -8,11 +8,9 @@ import Link from "next/link"
 import Swal from 'sweetalert2'
 import CartIcon from "../components/cartIcon"
 import { motion, AnimateSharedLayout, AnimatePresence } from 'framer-motion';
-interface Props {
 
-}
 
-const Navbar: React.FC<Props> = ({ }) => {
+const Navbar = ({ }) => {
     const { isOpen, onOpen, onClose } = useDisclosure()
     const { dispatch: cartDispatch, cartData } = useContext(CartContext);
     const btnRef = React.useRef()
